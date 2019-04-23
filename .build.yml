@@ -1,0 +1,11 @@
+image: ubuntu/cosmic
+packages:
+  - autotools-dev
+  - autoconf
+  - automake
+  - libtool
+  - guile-2.2
+sources:
+  - https://git.sr.ht/~amz3/guile-r7rs
+tasks:
+  - check: cd guile-r7rs && make check
