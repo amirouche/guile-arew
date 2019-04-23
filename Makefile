@@ -11,13 +11,13 @@ doc: ## Build the documentation with pandoc in html and pdf format.
 smoke:
 	guile -L $(PWD) smoke-test.scm
 
-TESTS_FILES = tests/base.scm
+TESTS_FILES = scheme/base-tests.scm
 
 check: smoke ## Run tests
 	guile -L $(PWD) $(TESTS_FILES)
 
 todo: ## Things that should be done.
-	@grep -nR --color=always TODO src/
+	@grep -nR --color=always --before-context=2 --after-context=2 TODO src/
 
 xxx: ## Things that require attention.
-	@grep -nR --color=always --before-context=2  --after-context=2 XXX src/
+	@grep -nR --color=always --before-context=2 --after-context=2 XXX src/

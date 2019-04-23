@@ -1,7 +1,23 @@
 ## `(scheme base)`
+
+### `_`
+
+TODO (missing in r7rs?)
+
+### `...`
+
+TODO
+
+### `=>`
+
+TODO
+
+### `else`
+
 TODO
 
 ### `*`
+
 TODO
 
 ### `(+ number ...)`
@@ -9,11 +25,11 @@ TODO
 Addition procedure.
 
 ### `-`
+
 TODO
 
 ### `/`
 TODO
-
 
 ### `<`
 TODO
@@ -279,9 +295,9 @@ TODO
 TODO
 
 
-### `error`
-TODO
+### `(error [who] message . irritants)`
 
+Raise an error.
 
 ### `error-object-irritants`
 TODO

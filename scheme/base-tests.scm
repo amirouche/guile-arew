@@ -1,9 +1,20 @@
-;;(use-module ((scheme base)))
-(use-modules ((srfi srfi-64)))
+(import (srfi srfi-64))
+(import (scheme base))
 
 
 (test-begin "scheme base")
 
-(test-assert "+" #t)
+(test-assert "+" (+ 1 2 3 4))
 
-(test-end "scheme base")
+(guard (ex ((eq? ex 'foo) 'bar) ((eq? ex 'bar) 'baz))
+  (raise 'bar))
+
+(test-assert "error"
+  (guard (ex ((string=? (error-object-message ex) "nok")))
+    (error 'tests-raise "nok" 'climate-change)))
+
+(test-assert "error"
+  (guard (ex ((string=? (error-object-message ex) "nok")))
+    (error "nok" 'climate-change)))
+
+(test-end)
