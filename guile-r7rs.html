@@ -1,8 +1,17 @@
 <h1 id="guile-r7rs">guile-r7rs</h1>
-<p><a href="https://gnu.org/s/guix/"><img src="https://www.gnu.org/software/guile/static/base/img/branding.png" alt="gnu guile logo" /></a></p>
 <p><a href="https://builds.sr.ht/~amz3/guile-r7rs?"><img src="https://builds.sr.ht/~amz3/guile-r7rs.svg" alt="builds.sr.ht status" /></a></p>
 <h2 id="introduction">Introduction</h2>
 <p>guile-r7rs is the collection of libraries part of <a href="https://r7rs.org">R7RS</a> bundled for GNU Guile 2.2 or later.</p>
+<h3 id="how-to-contribute">How to contribute</h3>
+<ol type="1">
+<li><p>Create an account on <a href="https://meta.sr.ht/register">sr.ht</a>. To contribute to existing repository, it is free.</p></li>
+<li><p>Pick a library from the table of content (see below), check nobody is working on it in the <a href="https://todo.sr.ht/~amz3/guile-r7rs">todo</a>.</p></li>
+<li><p>Add documentation, tests or an implementation based on existing Guile modules or sample implementation that can be found at <a href="http://srfi.schemers.org/" class="uri">http://srfi.schemers.org/</a>.</p></li>
+<li><p>When your contribution is ready, ask amirouche at hyper dev to become a contributor to be able to push.</p></li>
+</ol>
+<p>Don’t forget to add your name in the license header.</p>
+<p>When you add a documentation file, don’t forget to add it to <code>DOCUMENTATION_FILES</code> inside the <code>Makefile</code>. To build the documentation you will need <code>pandoc</code>, <code>latex</code> and to run <code>make doc</code>.</p>
+<p>When you add a test file, don’t forget to add it to <code>TESTS_FILES</code> inside <code>Makefile</code>. To run the tests use <code>make check</code>.</p>
 <h3 id="table-of-content">Table of Content</h3>
 <h4 id="r7rs-small">R7RS small</h4>
 <ul>
@@ -29,7 +38,6 @@
 <li><code>(scheme charset)</code> aka. SRFI 14</li>
 <li><code>(scheme comparator)</code> aka. SRFI 128</li>
 <li><code>(scheme ephemeron)</code>) aka. SRFI 124</li>
-<li><code>(scheme generator)</code> aka. SRFI 121</li>
 <li><code>(scheme hash-table)</code> aka. SRFI 125</li>
 <li><code>(scheme ideque)</code>) aka. SRFI 134</li>
 <li><code>(scheme ilist)</code> aka. SRFI 116</li>
@@ -61,28 +69,28 @@
 <h3 id="section"><code>_</code></h3>
 <p>TODO (missing in r7rs?)</p>
 <h3 id="section-1"><code>...</code></h3>
-<p>TODO</p>
+<p>It is called ellipsis. It used in macros, <code>match</code> that is not part of R7RS. It signify that a pattern must be repeated.</p>
 <h3 id="section-2"><code>=&gt;</code></h3>
 <p>TODO</p>
 <h3 id="else"><code>else</code></h3>
-<p>TODO</p>
-<h3 id="section-3"><code>*</code></h3>
-<p>TODO</p>
-<h3 id="number-..."><code>(+ number ...)</code></h3>
+<p>Used in <code>cond</code> form as in the last clause as a fallback.</p>
+<h3 id="number-..."><code>(* number ...)</code></h3>
+<p>Multiplication procedure.</p>
+<h3 id="number-...-1"><code>(+ number ...)</code></h3>
 <p>Addition procedure.</p>
-<h3 id="section-4"><code>-</code></h3>
-<p>TODO</p>
-<h3 id="section-5"><code>/</code></h3>
-<p>TODO</p>
-<h3 id="section-6"><code>&lt;</code></h3>
-<p>TODO</p>
-<h3 id="section-7"><code>&lt;=</code></h3>
-<p>TODO</p>
-<h3 id="section-8"><code>=</code></h3>
-<p>TODO</p>
-<h3 id="section-9"><code>&gt;</code></h3>
-<p>TODO</p>
-<h3 id="section-10"><code>&gt;=</code></h3>
+<h3 id="number-...-2"><code>(- number ...)</code></h3>
+<p>Substraction procedure.</p>
+<h3 id="number-number-..."><code>(/ number number ...)</code></h3>
+<p>Division procedure. Raise <code>'numerical-overflow</code> condition in case where denominator is zero.</p>
+<h3 id="number-number-...-1"><code>(&lt; number number ...)</code></h3>
+<p>Less than procedure. Return a boolean.</p>
+<h3 id="number-number-...-2"><code>(&lt;= number number ...)</code></h3>
+<p>Less than or equal procedure. Return a boolean.</p>
+<h3 id="number-number-...-3"><code>(= number number ...)</code></h3>
+<p>Return <code>#t</code> if the numbers passed as parameters are equal. And <code>#f</code> otherwise.</p>
+<h3 id="section-3"><code>&gt;</code></h3>
+<p>Greater than procedure. Return boolean.</p>
+<h3 id="section-4"><code>&gt;=</code></h3>
 <p>TODO</p>
 <h3 id="abs"><code>abs</code></h3>
 <p>TODO</p>
