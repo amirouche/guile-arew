@@ -3,17 +3,21 @@
 ;; SPDX-License-Identifier: CC0-1.0
 #!r6rs
 
-(library (scheme char)
-  (export
-    char-alphabetic? char-ci<=? char-ci<? char-ci=? char-ci>=?
-    char-ci>? char-downcase char-foldcase char-lower-case?
-    char-numeric? char-upcase char-upper-case? char-whitespace?
-    digit-value string-ci<=? string-ci<? string-ci=?
-    string-ci>=? string-ci>? string-downcase string-foldcase
-    string-upcase)
-  (import
+(define-module (scheme char))
+
+(import
     (rnrs)
-    (only (srfi :43 vectors) vector-binary-search))
+    (only (srfi srfi-43) vector-binary-search))
+
+(re-export
+ char-alphabetic? char-ci<=? char-ci<? char-ci=? char-ci>=?
+ char-ci>? char-downcase char-foldcase char-lower-case?
+ char-numeric? char-upcase char-upper-case? char-whitespace?
+ string-ci<=? string-ci<? string-ci=?
+ string-ci>=? string-ci>? string-downcase string-foldcase
+ string-upcase)
+
+(export digit-value)
 
 ;; The table can be extracted with:
 ;; awk -F ';' '/ZERO;Nd/ {print "#x"$1}' UnicodeData.txt
@@ -45,4 +49,4 @@
      => (lambda (zero)
           (- (char->integer char)
              (vector-ref *decimal-zeroes* zero))))
-    (else #f))))
+    (else #f)))

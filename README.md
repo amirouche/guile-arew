@@ -31,8 +31,7 @@ When you add a documentation file, don't forget to add it to
 `DOCUMENTATION_FILES` inside the `Makefile`. To build the
 documentation you will need `pandoc`, `latex` and to run `make doc`.
 
-When you add a test file, don't forget to add it to `TESTS_FILES`
-inside `Makefile`. To run the tests use `make check`.
+To run the tests use `make check`.
 
 ### Table of Content
 

@@ -4,7 +4,8 @@ help: ## This help.
 DOCUMENTATION_FILES =		\
 	README.md		\
 	scheme/base.md		\
-	scheme/case-lambda.md
+	scheme/case-lambda.md	\
+	scheme/char.md
 
 doc: ## Build the documentation with pandoc in html and pdf format.
 	pandoc  $(DOCUMENTATION_FILES) -o guile-r7rs.pdf
@@ -13,12 +14,8 @@ doc: ## Build the documentation with pandoc in html and pdf format.
 smoke:
 	guile -L $(PWD) smoke-test.scm
 
-TESTS_FILES = 	 			\
-	scheme/base-tests.scm 		\
-	scheme/case-lambda-tests.scm
-
 check: smoke ## Run tests
-	guile -L $(PWD) -l $(TESTS_FILES)
+	find scheme/ -name "*-tests.scm" -print0 | xargs -0L1 guile -L $(PWD)
 
 todo: ## Things that should be done.
 	@grep -nR --color=always --before-context=2 --after-context=2 TODO src/

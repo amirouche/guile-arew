@@ -593,6 +593,7 @@
 <p>Each clause is of the form <code>(formals body)</code>, where <code>formals</code> and <code>body</code> have the same syntax as in a lambda expression.</p>
 <p>A case-lambda expression evaluates to a procedure that accepts a variable number of arguments and is lexically scoped in the same manner as a procedure resulting from a lambda expression. When the procedure is called, the first clause for which the arguments agree with <code>formals</code> is selected, where agreement is specified as for the <code>formals</code> of a lambda expression. The variables of <code>formals</code> are bound to fresh locations, the values of the arguments are stored in those locations, the <code>body</code> is evaluated in the extended environment, and the results of <code>body</code> are returned as the results of the procedure call.</p>
 <p>It is an error for the arguments not to agree with the <code>formals</code> of any clause`.</p>
+<p><strong>Example:</strong></p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode scheme"><code class="sourceCode scheme"><a class="sourceLine" id="cb1-1" data-line-number="1">(<span class="kw">define</span><span class="fu"> add1</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">  (case-lambda</a>
 <a class="sourceLine" id="cb1-3" data-line-number="3">    ((a) (add1 a <span class="dv">0</span>))</a>
@@ -600,3 +601,48 @@
 <a class="sourceLine" id="cb1-5" data-line-number="5"></a>
 <a class="sourceLine" id="cb1-6" data-line-number="6">(add1 <span class="dv">1</span>) <span class="co">;; =&gt; 2</span></a>
 <a class="sourceLine" id="cb1-7" data-line-number="7">(add1 <span class="dv">1</span> <span class="dv">2</span>) <span class="co">;; =&gt; 4</span></a></code></pre></div>
+<h2 id="scheme-char"><code>(scheme char)</code></h2>
+<h3 id="char-alphabetic-char"><code>(char-alphabetic? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-alphabetic-char-1"><code>(char-alphabetic? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-ci-char"><code>(char-ci&lt;=? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-ci-char-1"><code>(char-ci&lt;? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-ci-char-2"><code>(char-ci=? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-ci-char-3"><code>(char-ci&gt;=? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-ci-char-4"><code>(char-ci&gt;? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-downcase-char"><code>(char-downcase char)</code></h3>
+<p>TODO</p>
+<h3 id="char-foldcase-char"><code>(char-foldcase char)</code></h3>
+<p>TODO</p>
+<h3 id="char-lower-case-char"><code>(char-lower-case? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-numeric-char"><code>(char-numeric? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-upcase-char"><code>(char-upcase char)</code></h3>
+<p>TODO</p>
+<h3 id="char-upper-case-char"><code>(char-upper-case? char)</code></h3>
+<p>TODO</p>
+<h3 id="char-whitespace-char"><code>(char-whitespace? char)</code></h3>
+<p>TODO</p>
+<h3 id="string-ci-string1-string2-..."><code>(string-ci&lt;=? string1 string2 ...)</code></h3>
+<p>TODO</p>
+<h3 id="string-ci-string1-string2-...-1"><code>(string-ci&lt;? string1 string2 ...)</code></h3>
+<p>TODO</p>
+<h3 id="string-ci-string1-string2-...-2"><code>(string-ci=? string1 string2 ...)</code></h3>
+<p>TODO</p>
+<h3 id="string-ci-string1-string2-...-3"><code>(string-ci&gt;=? string1 string2 ...)</code></h3>
+<p>TODO</p>
+<h3 id="string-ci-string1-string2-...-4"><code>(string-ci&gt;? string1 string2 ...)</code></h3>
+<p>TODO</p>
+<h3 id="string-downcase-string"><code>(string-downcase string)</code></h3>
+<p>TODO</p>
+<h3 id="string-foldcase-string"><code>(string-foldcase string)</code></h3>
+<p>TODO</p>
+<h3 id="string-upcase-string"><code>(string-upcase string)</code></h3>
+<p>TODO</p>
