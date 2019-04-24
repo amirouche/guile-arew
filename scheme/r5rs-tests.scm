@@ -1,6 +1,6 @@
 (import (srfi srfi-64))
 (import (scheme base))
-(import (scheme char))
+(import (scheme r5rs))
 
 
 (test-begin "r5rs")

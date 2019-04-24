@@ -20,7 +20,7 @@
  (scheme lazy))
 
 (re-export
- * + - ... / < <= = => > >= abs acos and angle append apply
+ * + - / < <= = > >= abs acos and angle append apply
  asin assoc assq assv atan begin boolean? caaaar caaadr caaar
  caadar caaddr caadr caar cadaar cadadr cadar caddar cadddr
  caddr cadr call-with-current-continuation
@@ -34,7 +34,7 @@
  char>=? char>? char? close-input-port close-output-port
  complex? cond cons cos current-input-port
  current-output-port define define-syntax delay denominator
- display do dynamic-wind else eof-object? eq? equal? eqv?
+ display do dynamic-wind eof-object? eq? equal? eqv?
  eval even? exact->inexact exact? exp expt floor for-each
  force gcd if imag-part inexact->exact inexact? input-port?
  integer->char integer? interaction-environment lambda lcm

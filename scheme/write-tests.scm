@@ -1,9 +1,9 @@
 (import (srfi srfi-64))
 (import (scheme base))
-(import (scheme load))
+(import (scheme write))
 
 
-(test-begin "load")
+(test-begin "write")
 
 (test-end)
 

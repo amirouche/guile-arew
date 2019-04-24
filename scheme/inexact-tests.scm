@@ -1,6 +1,6 @@
 (import (srfi srfi-64))
 (import (scheme base))
-(import (scheme cxr))
+(import (scheme inexact))
 
 
 (test-begin "inexact")

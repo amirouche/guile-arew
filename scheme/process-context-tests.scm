@@ -1,6 +1,6 @@
 (import (srfi srfi-64))
 (import (scheme base))
-(import (scheme cxr))
+(import (scheme process-context))
 
 
 (test-begin "load")

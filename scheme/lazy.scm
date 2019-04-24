@@ -17,4 +17,4 @@
 (define (promise? x)
   (and (record? x)
        (eq? (record-rtd x)
-            (record-rtd (eager #f))))))
+            (record-rtd (eager #f)))))

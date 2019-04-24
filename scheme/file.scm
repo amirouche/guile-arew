@@ -18,4 +18,4 @@
   (open-file-input-port file))
 
 (define (open-binary-output-file file)
-  (open-file-output-port file)))
+  (open-file-output-port file))

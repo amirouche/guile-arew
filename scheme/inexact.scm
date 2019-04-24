@@ -28,4 +28,4 @@
   (if (complex? z)
       (or (r6:nan? (real-part z))
           (r6:nan? (imag-part z)))
-      (r6:nan? z))))
+      (r6:nan? z)))

@@ -14,6 +14,11 @@ DOCUMENTATION_FILES =			\
 	scheme/lazy.md			\
 	scheme/load.md			\
 	scheme/process-context.md	\
+	scheme/r5rs.md			\
+	scheme/read.md			\
+	scheme/repl.md			\
+	scheme/time.md			\
+	scheme/write.md			\
 
 doc: ## Build the documentation with pandoc in html and pdf format.
 	pandoc  $(DOCUMENTATION_FILES) -o guile-r7rs.pdf
