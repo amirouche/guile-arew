@@ -11,7 +11,7 @@
 </ol>
 <p>Don’t forget to add your name in the license header.</p>
 <p>When you add a documentation file, don’t forget to add it to <code>DOCUMENTATION_FILES</code> inside the <code>Makefile</code>. To build the documentation you will need <code>pandoc</code>, <code>latex</code> and to run <code>make doc</code>.</p>
-<p>When you add a test file, don’t forget to add it to <code>TESTS_FILES</code> inside <code>Makefile</code>. To run the tests use <code>make check</code>.</p>
+<p>To run the tests use <code>make check</code>.</p>
 <h3 id="table-of-content">Table of Content</h3>
 <h4 id="r7rs-small">R7RS small</h4>
 <ul>
@@ -645,4 +645,110 @@
 <h3 id="string-foldcase-string"><code>(string-foldcase string)</code></h3>
 <p>TODO</p>
 <h3 id="string-upcase-string"><code>(string-upcase string)</code></h3>
+<p>TODO</p>
+<h2 id="scheme-complex"><code>(scheme complex)</code></h2>
+<h3 id="angle"><code>angle</code></h3>
+<p>TODO</p>
+<h3 id="imag-part"><code>imag-part</code></h3>
+<p>TODO</p>
+<h3 id="magnitude"><code>magnitude</code></h3>
+<p>TODO</p>
+<h3 id="make-polar"><code>make-polar</code></h3>
+<p>TODO</p>
+<h3 id="make-rectangular"><code>make-rectangular</code></h3>
+<p>TODO</p>
+<h3 id="real-part"><code>real-part</code></h3>
+<p>TODO</p>
+<h2 id="scheme-cxr"><code>(scheme cxr)</code></h2>
+<p>Exports the following procedure which are the compositions of from three to four <code>car</code> and <code>cdr</code> operations. For example caddar could be defined by:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode scheme"><code class="sourceCode scheme"><a class="sourceLine" id="cb2-1" data-line-number="1">(<span class="kw">define</span><span class="fu"> caddar</span></a>
+<a class="sourceLine" id="cb2-2" data-line-number="2">  (<span class="kw">lambda</span> (x) (<span class="kw">car</span> (<span class="kw">cdr</span> (<span class="kw">cdr</span> (<span class="kw">car</span> x))))))</a></code></pre></div>
+<p>Here is the full list:</p>
+<ul>
+<li><code>caaaar</code></li>
+<li><code>caaadr</code></li>
+<li><code>caaar</code></li>
+<li><code>caadar</code></li>
+<li><code>caaddr</code></li>
+<li><code>caadr</code></li>
+<li><code>cadaar</code></li>
+<li><code>cadadr</code></li>
+<li><code>cadar</code></li>
+<li><code>caddar</code></li>
+<li><code>cadddr</code></li>
+<li><code>caddr</code></li>
+<li><code>cdaaar</code></li>
+<li><code>cdaadr</code></li>
+<li><code>cdaar</code></li>
+<li><code>cdadar</code></li>
+<li><code>cdaddr</code></li>
+<li><code>cdadr</code></li>
+<li><code>cddaar</code></li>
+<li><code>cddadr</code></li>
+<li><code>cddar</code></li>
+<li><code>cdddar</code></li>
+<li><code>cddddr</code></li>
+<li><code>cdddr</code></li>
+</ul>
+<h2 id="scheme-eval"><code>(scheme eval)</code></h2>
+<h3 id="environment"><code>(environment)</code></h3>
+<p>TODO</p>
+<h3 id="eval"><code>(eval)</code></h3>
+<p>TODO</p>
+<h2 id="scheme-file"><code>(scheme file)</code></h2>
+<h3 id="call-with-input-file"><code>(call-with-input-file)</code></h3>
+<p>TODO</p>
+<h3 id="call-with-output-file"><code>(call-with-output-file)</code></h3>
+<p>TODO</p>
+<h3 id="delete-file"><code>(delete-file)</code></h3>
+<p>TODO</p>
+<h3 id="file-exists"><code>(file-exists?)</code></h3>
+<p>TODO</p>
+<h3 id="open-input-file"><code>(open-input-file)</code></h3>
+<p>TODO</p>
+<h3 id="open-output-file"><code>(open-output-file)</code></h3>
+<p>TODO</p>
+<h3 id="with-input-from-file"><code>(with-input-from-file)</code></h3>
+<p>TODO</p>
+<h3 id="with-output-to-file"><code>(with-output-to-file)</code></h3>
+<p>TODO</p>
+<h3 id="open-binary-input-file"><code>(open-binary-input-file)</code></h3>
+<p>TODO</p>
+<h3 id="open-binary-output-file"><code>(open-binary-output-file)</code></h3>
+<p>TODO</p>
+<h2 id="scheme-inexact"><code>(scheme inexact)</code></h2>
+<h3 id="acos-z"><code>(acos z)</code></h3>
+<p>TODO</p>
+<h3 id="asin-z"><code>(asin z)</code></h3>
+<p>TODO</p>
+<h3 id="atan-z"><code>(atan z)</code></h3>
+<p>TODO</p>
+<h3 id="cos-z"><code>(cos z)</code></h3>
+<p>TODO</p>
+<h3 id="exp-z-t"><code>(exp z t)</code></h3>
+<p>TODO</p>
+<h3 id="finite-z"><code>(finite? z)</code></h3>
+<p>TODO</p>
+<h3 id="infinite-z"><code>(infinite? z)</code></h3>
+<p>TODO</p>
+<h3 id="log-z"><code>(log z)</code></h3>
+<p>TODO</p>
+<h3 id="nan-z"><code>(nan? z)</code></h3>
+<p>TODO</p>
+<h3 id="sin">sin</h3>
+<p>TODO</p>
+<h3 id="sqrt">sqrt</h3>
+<p>TODO</p>
+<h3 id="tan">tan</h3>
+<p>TODO</p>
+<h2 id="scheme-lazy"><code>(scheme lazy)</code></h2>
+<h3 id="delay-exp"><code>(delay exp)</code></h3>
+<p>TODO</p>
+<h3 id="force-promise"><code>(force promise)</code></h3>
+<p>TODO</p>
+<h3 id="delay-force-exp"><code>(delay-force exp)</code></h3>
+<p>TODO</p>
+<h3 id="promise-obj"><code>(promise? obj)</code></h3>
+<p>TODO</p>
+<h3 id="make-promise-exp"><code>(make-promise exp)</code></h3>
 <p>TODO</p>

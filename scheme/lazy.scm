@@ -2,15 +2,16 @@
 ;; SPDX-License-Identifier: CC0-1.0
 #!r6rs
 
-(library (scheme lazy)
-  (export
-    delay force
-    (rename (eager make-promise)
-            (lazy delay-force))
-    promise?)
-  (import
-    (rnrs)
-    (srfi :45 lazy))
+(define-module (scheme lazy))
+
+(import
+ (rnrs)
+ (srfi srfi-45))
+
+(re-export delay force)
+(re-export (eager . make-promise)
+           (lazy . delay-force))
+(export promise?)
 
 ;; Uses the fact that chez-srfi promises are based on records.
 (define (promise? x)
