@@ -93,7 +93,6 @@
 (export! error)
 (export syntax-error let-syntax syntax-rules bytevector
         bytevector-append bytevector-copy bytevector-copy!
-        bytevector-length bytevector-u8-ref bytevector-u8-set!
         error-object-irritants error-object-message error-object?
         file-error? flush-output-port get-output-bytevector
         open-input-bytevector open-output-bytevector peek-u8
@@ -123,13 +122,14 @@
 (re-export (r6:vector-map . vector-map))
 (re-export (r6:with-exception-handler . with-exception-handler))
 (re-export (r6:case . case))
-
+(re-export (r6:bytevector-length . bytevector-length))
+(re-export (r6:bytevector-u8-ref . bytevector-u8-ref))
+(re-export (r6:bytevector-u8-set! . bytevector-u8-set!))
 
 (define (error message . irritants)
   (if (and (symbol? message) (pair? irritants) (string? (car irritants)))
       (apply r6:error message irritants)
       (apply r6:error #f message irritants)))
-
 
 (define-syntax syntax-error
   (lambda (x)
@@ -484,7 +484,7 @@
   out)
 
 (define (%subbytevector1 bv start)
-  (%subbytevector bv start (bytevector-length bv)))
+  (%subbytevector bv start (r6:bytevector-length bv)))
 
 (define bytevector-copy!
   (case-lambda

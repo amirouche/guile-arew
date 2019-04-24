@@ -85,6 +85,35 @@
 
 (test-equal "35" (boolean? 23) #f)
 
+(test-equal "36" (bytevector 0 1 2 3 4 5) #vu8(0 1 2 3 4 5))
+
+(test-equal "37" (bytevector-append #vu8(0 1 2) #vu8(3 4 5)) #vu8(0 1 2 3 4 5))
+
+(test-equal "38" (bytevector-copy #vu8(0 1 2)) #vu8(0 1 2))
+
+(test-equal "39" (bytevector-copy #vu8(0 1 2) 1) #vu8(1 2))
+
+(test-equal "40" (bytevector-copy #vu8(0 1 2) 1 2) #vu8(1))
+
+(test-equal "41" (let ((bv (make-bytevector 4 0)))
+                   (bytevector-copy! bv 1 #vu8(0 1 2 3 4) 1 3)
+                   bv)
+            #vu8(0 1 2 0))
+
+(test-equal "42" (bytevector-length #vu8(0 1 2)) 3)
+
+(test-equal "43" (bytevector-u8-ref #vu8(0 1 2) 2) 2)
+
+(test-equal "44" (let ((bv (make-bytevector 4 0)))
+                   (bytevector-u8-set! bv 1 42)
+                   bv)
+            #vu8(0 42 0 0))
+
+(test-equal "45" (bytevector? #vu8(0 1 2)) #t)
+
+(test-equal "46" (bytevector? 123456) #f)
+
+
 (test-assert "error"
   (guard (ex ((string=? (error-object-message ex) "nok")))
     (error 'tests-raise "nok" 'climate-change)))
