@@ -2,14 +2,17 @@
 ;; SPDX-License-Identifier: CC0-1.0
 #!r6rs
 
-(library (scheme file)
-  (export
-    call-with-input-file call-with-output-file delete-file file-exists?
-    open-binary-input-file open-binary-output-file
-    open-input-file open-output-file with-input-from-file
-    with-output-to-file)
-  (import
-    (rnrs))
+(define-module (scheme file))
+
+(import (rnrs))
+
+(re-export
+ call-with-input-file call-with-output-file delete-file file-exists?
+ open-input-file open-output-file with-input-from-file
+ with-output-to-file)
+
+(export open-binary-input-file)
+(export open-binary-output-file)
 
 (define (open-binary-input-file file)
   (open-file-input-port file))

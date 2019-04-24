@@ -9,6 +9,7 @@ DOCUMENTATION_FILES =		\
 	scheme/complex.md	\
 	scheme/cxr.md		\
 	scheme/eval.md		\
+	scheme/file.md		\
 
 doc: ## Build the documentation with pandoc in html and pdf format.
 	pandoc  $(DOCUMENTATION_FILES) -o guile-r7rs.pdf
