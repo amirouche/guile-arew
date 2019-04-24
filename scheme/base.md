@@ -96,21 +96,21 @@ predicate `eqv?`. Or it returns `#f`.
 
 There is two uses of `begin`.
 
-#### `(begin ⟨expression or definition⟩ ...)`
+#### `(begin expression-or-definition ...)`
 
-This form of begin can appear as part of a ⟨body⟩, or at the outermost
-level of a ⟨program⟩, or at the REPL, or directly nested in a begin
+This form of begin can appear as part of a body, or at the outermost
+level of a program, or at the REPL, or directly nested in a begin
 that is itself of this form. It causes the contained expressions and
 definitions to be evaluated exactly as if the enclosing begin
 construct were not present.
 
 TODO: example
 
-#### `(begin ⟨expression1⟩ ⟨expression2⟩ ...)`
+#### `(begin expression1 expression2 ...)`
 
 This form of begin can be used as an ordinary expression. The
-⟨expression⟩s are evaluated sequentially from left to right, and the
-values of the last ⟨expression⟩ are returned. This expression type is
+expressions are evaluated sequentially from left to right, and the
+values of the last expression are returned. This expression type is
 used to sequence side effects such as assignments or input and output.
 
 TODO: example
@@ -860,13 +860,13 @@ The pair? predicate returns #t if obj is a pair, and otherwise returns
 A parameterize expression is used to change the values returned by
 specified parameter objects during the evaluation of the body.
 
-The ⟨param⟩ and ⟨value⟩ expressions are evaluated in an unspecified
-order. The ⟨body⟩ is evaluated in a dynamic environment in which calls
+The param and value expressions are evaluated in an unspecified
+order. The body is evaluated in a dynamic environment in which calls
 to the parameters return the results of passing the corresponding
 values to the conversion procedure specified when the parameters were
 created. Then the previous values of the parameters are restored
 without passing them to the conversion procedure. The results of the
-last expression in the ⟨body⟩ are returned as the results of the
+last expression in the body are returned as the results of the
 entire parameterize expression.
 
 Note: If the conversion procedure is not idempotent, the results of
@@ -876,7 +876,7 @@ its current value, might not be what the user expects.
 If an implementation supports multiple threads of execution, then
 parameterize must not change the associated values of any parameters
 in any thread other than the current thread and threads created inside
-⟨body⟩.
+body.
 
 Parameter objects can be used to specify configurable settings for a
 computation without the need to pass the value to every procedure in
@@ -1033,7 +1033,7 @@ TODO
 ### `(set! variable expression)` syntax
 
 Expression is evaluated, and the resulting value is stored in the
-location to which ⟨variable⟩ is bound. It is an error if ⟨variable⟩ is
+location to which variable is bound. It is an error if variable is
 not bound either in some region enclosing the set! expression or else
 globally. The result of the set! expression is unspecified.
 
