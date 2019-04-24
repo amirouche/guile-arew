@@ -4,4 +4,6 @@
 
 (define-module (scheme repl))
 
-;; TODO: interaction-environment
+(import (rnrs))
+
+(re-export interaction-environment)
