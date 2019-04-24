@@ -12,6 +12,7 @@ DOCUMENTATION_FILES =		\
 	scheme/file.md		\
 	scheme/inexact.md	\
 	scheme/lazy.md		\
+	scheme/load.md		\
 
 
 doc: ## Build the documentation with pandoc in html and pdf format.
