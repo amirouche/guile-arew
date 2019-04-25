@@ -4,7 +4,7 @@
 ;; code in this repository is copyrighted by John Cowan and has been
 ;; released under the SRFI licence.
 
-(define-module (scheme generator))
+(define-module (scheme comparator))
 
 (export comparator?
         comparator-ordered?
@@ -65,5 +65,5 @@
          (else #f)))))
 
 ;; THESE FILES ARE LICENSED UNDER THE SRFI LICENSE
-(include "generator/body1.scm")
-(include "generator/body2.scm")
+(include "comparator/body1.scm")
+(include "comparator/body2.scm")

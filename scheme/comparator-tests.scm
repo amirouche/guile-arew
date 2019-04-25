@@ -29,7 +29,7 @@
 ;;
 
 (import (srfi srfi-64))
-(import (scheme generator))
+(import (scheme comparator))
 (import (rnrs bytevectors)) ;; TODO: replace with (scheme bytevector)
 
 (define-syntax test
