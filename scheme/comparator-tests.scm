@@ -95,7 +95,7 @@
 (define hf (lambda (x) (set! x4 444) 0))
 (define comp (make-comparator ttp eqp orp hf))
 
-(test-begin "test")
+(test-begin "comparator")
 (test-group "comparators"
   (test '#(2 3 4) (vector-cdr '#(1 2 3 4)))
   (test '#() (vector-cdr '#(1)))
@@ -303,7 +303,7 @@
 
 ) ; end comparators
 
-(test-end "test")
+(test-end "comparator")
 
 ;; exit
 (define xpass (test-runner-xpass-count (test-runner-current)))
