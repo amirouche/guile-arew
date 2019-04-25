@@ -42,8 +42,6 @@ collector can move objects in memory.
 
 **Limitations**
 
-Limitations
-
 The comparator objects defined in this library are not applicable to
 circular structure or to NaNs or objects containing them. Attempts to
 pass any such objects to any procedure defined here, or to any
@@ -431,17 +429,17 @@ necessarily, be a call on a comparison procedure. If the result is -1,
 is 1, `<greater>` is evaluated and its value(s) are
 returned. Otherwise an error is signaled.
 
-##### `(if=? <expr> <consequent> [ <alternate> ])
+##### `(if=? <expr> <consequent> [ <alternate> ])`
 
-##### `(if<? <expr> <consequent> [ <alternate> ])
+##### `(if<? <expr> <consequent> [ <alternate> ])`
 
-##### `(if>? <expr> <consequent> [ <alternate> ])
+##### `(if>? <expr> <consequent> [ <alternate> ])`
 
-##### `(if<=? <expr> <consequent> [ <alternate> ])
+##### `(if<=? <expr> <consequent> [ <alternate> ])`
 
-##### `(if>=? <expr> <consequent> [ <alternate> ])
+##### `(if>=? <expr> <consequent> [ <alternate> ])`
 
-##### `(if-not=? <expr> <consequent> [ <alternate> ])
+##### `(if-not=? <expr> <consequent> [ <alternate> ])`
 
 The expression `<expr>` is evaluated; it will typically, but not
 necessarily, be a call on a comparison procedure. It is an error if
@@ -504,22 +502,22 @@ is contained in an open, closed, or half-open interval. All
 comparisons are done in the sense of comparator, which is
 default-comparator if omitted.
 
-##### `(in-open-interval? [ comparator ] obj1 obj2 obj3)`
+##### `(in-open-interval? [comparator] obj1 obj2 obj3)`
 
 Return #t if obj1 is less than obj2, which is less thanobj3, and #f
 otherwise.
 
-##### `(in-closed-interval? [ comparator ] obj1 obj2 obj3)`
+##### `(in-closed-interval? [comparator] obj1 obj2 obj3)`
 
 Returns #t if obj1 is less than or equal to obj2, which is less than
 or equal to obj3, and #f otherwise.
 
-##### `(in-open-closed-interval? [ comparator ] obj1 obj2 obj3)`
+##### `(in-open-closed-interval? [comparator] obj1 obj2 obj3)`
 
 Returns #t if obj1 is less than obj2, which is less than or equal to
 obj3, and #f otherwise.
 
-##### `(in-closed-open-interval? [ comparator ] obj1 obj2 obj3)`
+##### `(in-closed-open-interval? [comparator] obj1 obj2 obj3)`
 
 Returns #t if obj1 is less than or equal to obj2, which is less than
 obj3, and #f otherwise.
