@@ -90,8 +90,8 @@
  vector? when write-char
  zero?)
 
-(export! error)
-(export syntax-error let-syntax syntax-rules bytevector
+(export! error syntax-rules syntax-error)
+(export let-syntax bytevector
         bytevector-append bytevector-copy bytevector-copy!
         error-object-irritants error-object-message error-object?
         file-error? flush-output-port get-output-bytevector
