@@ -62,3 +62,6 @@ todo: ## Things that should be done.
 
 xxx: ## Things that require attention.
 	@grep -nR --color=always --before-context=2 --after-context=2 XXX src/
+
+repl: ## Start a guile REPL
+	guile -L $(PWD)
