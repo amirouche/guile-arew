@@ -3,6 +3,7 @@ help: ## This help.
 
 DOCUMENTATION_FILES =			\
 	README.md			\
+	scheme/assume.md		\
 	scheme/base.md			\
 	scheme/bitwise.md		\
 	scheme/box.md			\
