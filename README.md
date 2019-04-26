@@ -7,32 +7,6 @@
 guile-r7rs is the collection of libraries part of
 [R7RS](https://r7rs.org) bundled for GNU Guile 2.2 or later.
 
-### How to contribute
-
-1. Create an account on [sr.ht](https://meta.sr.ht/register). To
-   contribute to existing repository, it is free.
-
-2. Pick an item and check nobody is working on it in the
-   [todo](https://todo.sr.ht/~amz3/guile-r7rs).
-
-3. Add documentation, tests or an implementation based on existing
-   Guile modules or sample implementation that can be found at
-   [http://srfi.schemers.org/](http://srfi.schemers.org/). Also, R7RS
-   small is implemented in terms of R6RS in
-   [akku-r7rs](https://gitlab.com/akkuscm/akku-r7rs/) in a compatible
-   license.
-
-4. When your contribution is ready, ask amirouche at hyper dev to
-   become a contributor to be able to push.
-
-Don't forget to add your name in the license header.
-
-When you add a documentation file, don't forget to add it to
-`DOCUMENTATION_FILES` inside the `Makefile`. To build the
-documentation you will need `pandoc`, `latex` and to run `make doc`.
-
-To run the tests use `make check`.
-
 ### Table of Content
 
 #### R7RS small
