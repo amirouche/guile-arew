@@ -9,7 +9,7 @@ guile-r7rs is the collection of libraries part of
 
 This is a work-in-progress, use it at your own risks.
 
-If you would like to contribute head to the
+If you would like to contribute go to the
 [tracker](https://todo.sr.ht/~amz3/guile-r7rs).
 
 ### Table of Content
@@ -62,6 +62,6 @@ If you would like to contribute head to the
 - `(scheme bitwise)` aka. SRFI 151
 - `(scheme fixnum)` aka. SRFI 143
 - `(scheme flonum)` aka. SRFI 144
-- `(scheme bytevector)` aka. `(rnrs bytevectors)` aka. SRFI 4
+- `(scheme bytevector)` aka. `(rnrs bytevectors)`
 - `(scheme vector @)` aka. SRFI 160 where @ is any of base, u8, s8, u16, s16, u32, s32, u64, s64, f32, f64, c64, c128.
 - `(scheme show)` aka. SRFI 159

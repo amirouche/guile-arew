@@ -1,6 +1,6 @@
-## `(scheme template)`
+## `(scheme text)`
 
-This library is based on [SRFI-XYZ](https://srfi.schemers.org/srfi-XYZ/).
+This library is based on [SRFI-135](https://srfi.schemers.org/srfi-135/).
 
 ### Abstract
 

@@ -1,6 +1,6 @@
-## `(scheme template)`
+## `(scheme ephemeron)`
 
-This library is based on [SRFI-XYZ](https://srfi.schemers.org/srfi-XYZ/).
+This library is based on [SRFI-124](https://srfi.schemers.org/srfi-124/).
 
 ### Abstract
 

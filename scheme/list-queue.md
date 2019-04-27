@@ -1,6 +1,6 @@
-## `(scheme template)`
+## `(scheme list-queue)`
 
-This library is based on [SRFI-XYZ](https://srfi.schemers.org/srfi-XYZ/).
+This library is based on [SRFI-117](https://srfi.schemers.org/srfi-117/).
 
 ### Abstract
 

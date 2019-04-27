@@ -2,6 +2,8 @@
 <p><a href="https://builds.sr.ht/~amz3/guile-r7rs?"><img src="https://builds.sr.ht/~amz3/guile-r7rs.svg" alt="builds.sr.ht status" /></a></p>
 <h2 id="introduction">Introduction</h2>
 <p>guile-r7rs is the collection of libraries part of <a href="https://r7rs.org">R7RS</a> bundled for GNU Guile 2.2 or later.</p>
+<p>This is a work-in-progress, use it at your own risks.</p>
+<p>If you would like to contribute go to the <a href="https://todo.sr.ht/~amz3/guile-r7rs">tracker</a>.</p>
 <h3 id="table-of-content">Table of Content</h3>
 <h4 id="r7rs-small">R7RS small</h4>
 <ul>
@@ -51,7 +53,7 @@
 <li><code>(scheme bitwise)</code> aka. SRFI 151</li>
 <li><code>(scheme fixnum)</code> aka. SRFI 143</li>
 <li><code>(scheme flonum)</code> aka. SRFI 144</li>
-<li><code>(scheme bytevector)</code> aka. <code>(rnrs bytevectors)</code> aka. SRFI 4</li>
+<li><code>(scheme bytevector)</code> aka. <code>(rnrs bytevectors)</code></li>
 <li><code>(scheme vector @)</code> aka. SRFI 160 where @ is any of base, u8, s8, u16, s16, u32, s32, u64, s64, f32, f64, c64, c128.</li>
 <li><code>(scheme show)</code> aka. SRFI 159</li>
 </ul>
@@ -958,8 +960,8 @@
 <p>TODO</p>
 <h3 id="string-upcase-string"><code>(string-upcase string)</code></h3>
 <p>TODO</p>
-<h2 id="scheme-template"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-charset"><code>(scheme charset)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-14/">SRFI-14</a>.</p>
 <h3 id="abstract-4">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-4">Reference</h3>
@@ -1191,14 +1193,14 @@
 <li><code>cddddr</code></li>
 <li><code>cdddr</code></li>
 </ul>
-<h2 id="scheme-template-1"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-division"><code>(scheme division)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-141/">SRFI-141</a>.</p>
 <h3 id="abstract-6">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-6">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-2"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-ephemeron"><code>(scheme ephemeron)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-124/">SRFI-124</a>.</p>
 <h3 id="abstract-7">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-7">Reference</h3>
@@ -1229,14 +1231,14 @@
 <p>TODO</p>
 <h3 id="open-binary-output-file"><code>(open-binary-output-file)</code></h3>
 <p>TODO</p>
-<h2 id="scheme-template-3"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-fixnum"><code>(scheme fixnum)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-143/">SRFI-143</a>.</p>
 <h3 id="abstract-8">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-8">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-4"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-flonum"><code>(scheme flonum)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-144/">SRFI-144</a>.</p>
 <h3 id="abstract-9">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-9">Reference</h3>
@@ -1460,9 +1462,9 @@
 <h4 id="constructors">Constructors</h4>
 <h5 id="make-hash-table-comparator-.-args"><code>(make-hash-table comparator . args)</code></h5>
 <p>Returns a newly allocated hash table using <code>(scheme comparator)</code> object <code>COMPARATOR</code>. For the time being, <code>ARGS</code> is ignored.</p>
-<h5 id="hash-table-comparator-key-value-..."><code>(hash-table comparator  [key value] ...)</code></h5>
+<h5 id="hash-table-comparator-key-value-..."><code>(hash-table comparator [key value] ...)</code></h5>
 <p>Returns a newly allocated hash table using <code>(scheme comparator)</code> object <code>COMPARATOR</code>. For each pair of arguments, an association is added to the new hash table with key as its key and value as its value. If the same key (in the sense of the equality predicate) is specified more than once, it is an error.</p>
-<h5 id="hash-table-unfold-stop-mapper-successor-seed-comparator-arg-..."><code>(hash-table-unfold stop? mapper successor seed comparator arg ...)</code></h5>
+<h5 id="hash-table-unfold-stop-mapper-successor-seed-comparator-args-..."><code>(hash-table-unfold stop? mapper successor seed comparator args ...)</code></h5>
 <p>Create a new hash table as if by <code>make-hash-table</code> using <code>comparator</code> and the <code>args</code>. If the result of applying the predicate <code>stop?</code> to <code>seed</code> is true, return the hash table. Otherwise, apply the procedure <code>mapper</code> to <code>seed</code>. <code>mapper</code> returns two values, which are inserted into the hash table as the key and the value respectively. Then get a new <code>seed</code> by applying the procedure <code>successor</code> to <code>seed</code>, and repeat this algorithm.</p>
 <h5 id="alist-hash-table-alist-comparator-arg-..."><code>(alist-&gt;hash-table alist comparator arg ...)</code></h5>
 <p>Returns a newly allocated hash-table as if by <code>make-hash-table</code> using <code>comparator</code> and the <code>args</code>. It is then initialized from the associations of <code>alist</code>. Associations earlier in the list take precedence over those that come later.</p>
@@ -1515,7 +1517,7 @@
 <h4 id="mapping-and-folding">Mapping and folding</h4>
 <p>These procedures process the associations of the hash table in an unspecified order.</p>
 <h5 id="hash-table-map-proc-comparator-hash-table"><code>(hash-table-map proc comparator hash-table)</code></h5>
-<p>Returns a newly allocated hash table as if by (make-hash-table comparator). Calls proc for every association in hash-table with the value of the association. The key of the association and the result of invoking proc are entered into the new hash table. Note that this is not the result of lifting mapping over the domain of hash tables, but it is considered more useful.</p>
+<p>Returns a newly allocated hash table as if by <code>(make-hash-table comparator)</code>. Calls <code>PROC</code> for every association in <code>hash-table</code> with the value of the association. The key of the association and the result of invoking <code>proc</code> are entered into the new hash table. Note that this is not the result of lifting mapping over the domain of hash tables, but it is considered more useful.</p>
 <p>If comparator recognizes multiple keys in the hash-table as equivalent, any one of such associations is taken.</p>
 <h5 id="hash-table-for-each-proc-hash-table"><code>(hash-table-for-each proc hash-table)</code></h5>
 <p>Calls proc for every association in hash-table with two arguments: the key of the association and the value of the association. The value returned by proc is discarded. Returns an unspecified value.</p>
@@ -1543,14 +1545,14 @@
 <p>Deletes the associations of hash-table1 whose keys are also present in hash-table2 and returns hash-table1.</p>
 <h5 id="hash-table-xor-hash-table1-hash-table2"><code>(hash-table-xor! hash-table1 hash-table2)</code></h5>
 <p>Deletes the associations of hash-table1 whose keys are also present in hash-table2, and then adds the associations of hash-table2 whose keys are not present in hash-table1 to hash-table1. Returns hash-table1.</p>
-<h2 id="scheme-template-5"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-ideque"><code>(scheme ideque)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-134/">SRFI-134</a>.</p>
 <h3 id="abstract-12">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-12">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-6"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-ilist"><code>(scheme ilist)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-116/">SRFI-116</a>.</p>
 <h3 id="abstract-13">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-13">Reference</h3>
@@ -1591,8 +1593,8 @@
 <p>TODO</p>
 <h3 id="make-promise-exp"><code>(make-promise exp)</code></h3>
 <p>TODO</p>
-<h2 id="scheme-template-7"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-list-queue"><code>(scheme list-queue)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-117/">SRFI-117</a>.</p>
 <h3 id="abstract-14">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-14">Reference</h3>
@@ -2143,8 +2145,8 @@
 <p>It is an error if filename is not a string.</p>
 <p>An implementation-dependent operation is used to transform filename into the name of an existing file containing Scheme source code. The load procedure reads expressions and definitions from the file and evaluates them sequentially in the environment specified by environment-specifier. If environment-specifier is omitted, (interaction-environment) is assumed.</p>
 <p>It is unspecified whether the results of the expressions are printed. The load procedure does not affect the values returned by current-input-port and current-output-port. It returns an unspecified value.</p>
-<h2 id="scheme-template-8"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-lseq"><code>(scheme lseq)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-127/">SRFI-127</a>.</p>
 <h3 id="abstract-16">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-16">Reference</h3>
@@ -2742,8 +2744,8 @@
 <h3 id="read-port"><code>(read [port])</code></h3>
 <p>The read procedure converts external representations of Scheme objects into the objects themselves. That is, it is a parser for the non-terminal datum. It returns the next object parsable from the given textual input port, updating port to point to the first character past the end of the external representation of the object.</p>
 <p>The current implementation is not fully compatible with R7RS.</p>
-<h2 id="scheme-template-9"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-regex"><code>(scheme regex)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-115/">SRFI-115</a>.</p>
 <h3 id="abstract-19">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-19">Reference</h3>
@@ -2751,8 +2753,8 @@
 <h2 id="scheme-repl"><code>(scheme repl)</code></h2>
 <h3 id="interaction-environment"><code>(interaction-environment)</code></h3>
 <p>This procedure returns a specifier for a mutable environment that contains an implementation-defined set of bindings, typically a superset of those exported by (scheme base). The intent is that this procedure will return the environment in which the implementation would evaluate expressions entered by the user into a REPL.</p>
-<h2 id="scheme-template-10"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-rlist"><code>(scheme rlist)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-101/">SRFI-101</a>.</p>
 <h3 id="abstract-20">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-20">Reference</h3>
@@ -2879,26 +2881,26 @@
 <h5 id="set-bag-1">set-&gt;bag!</h5>
 <h5 id="bag-alist">bag-&gt;alist</h5>
 <h5 id="alist-bag">alist-&gt;bag</h5>
-<h2 id="scheme-template-11"><code>(scheme template)</code></h2>
+<h2 id="scheme-template"><code>(scheme template)</code></h2>
 <p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
 <h3 id="abstract-22">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-22">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-12"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-sort"><code>(scheme sort)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-132/">SRFI-132</a>. The implementation comes from guile <code>(rnrs sorting)</code>.</p>
 <h3 id="abstract-23">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-23">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-13"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-stream"><code>(scheme stream)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-41/">SRFI-41</a>.</p>
 <h3 id="abstract-24">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-24">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-14"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-text"><code>(scheme text)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-135/">SRFI-135</a>.</p>
 <h3 id="abstract-25">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-25">Reference</h3>
@@ -2910,14 +2912,14 @@
 <p>Returns an inexact number representing the current time on the International Atomic Time (TAI) scale. The value 0.0 represents midnight on January 1, 1970 TAI (equivalent to ten seconds before midnight Universal Time) and the value 1.0 represents one TAI second later. Neither high accuracy nor high precision are required; in particular, returning Coordinated Universal Time plus a suitable constant might be the best an implementation can do.</p>
 <h3 id="jiffies-per-second"><code>(jiffies-per-second)</code></h3>
 <p>Returns an exact integer representing the number of jiffies per SI second. This value is an implementation-specified constant.</p>
-<h2 id="scheme-template-15"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-vector"><code>(scheme vector)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-133/">SRFI-133</a>.</p>
 <h3 id="abstract-26">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-26">Reference</h3>
 <p>TODO</p>
-<h2 id="scheme-template-16"><code>(scheme template)</code></h2>
-<p>This library is based on <a href="https://srfi.schemers.org/srfi-XYZ/">SRFI-XYZ</a>.</p>
+<h2 id="scheme-vector-1"><code>(scheme vector @)</code></h2>
+<p>This library is based on <a href="https://srfi.schemers.org/srfi-160/">SRFI-160</a>.</p>
 <h3 id="abstract-27">Abstract</h3>
 <p>TODO</p>
 <h3 id="reference-27">Reference</h3>
