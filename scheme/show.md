@@ -1,4 +1,4 @@
-## `(scheme template)`
+## `(scheme show)`
 
 This library is based on [SRFI-XYZ](https://srfi.schemers.org/srfi-XYZ/).
 
