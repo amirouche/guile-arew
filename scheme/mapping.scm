@@ -281,7 +281,7 @@
 (define (tree-generator tree)
   (make-coroutine-generator
    (lambda (yield)
-     (tree-for-each (lambda item (yield item)) tree))))
+     (tree-for-each (lambda item (yield item) #f) tree))))
 
 (define identity values)
 
