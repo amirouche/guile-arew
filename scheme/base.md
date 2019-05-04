@@ -548,21 +548,21 @@ It is an error if port was not created with open-output-string.
 Returns a string consisting of the characters that have been output to
 the port so far in the order they were output.
 
-### `guard`
+### `(guard <clause> ...)` syntax
 
 TODO
 
-### `(if expr then [else])`
+### `(if <expr> <then> [<else>])`
 
 TODO
 
 ### `include`
 
-TODO: not implemented?
+TODO
 
 ### `include-ci`
 
-TODO: not implemented?
+TODO: not implemented
 
 ### `(inexact z)`
 
