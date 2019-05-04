@@ -283,7 +283,7 @@
    (lambda (yield)
      (tree-for-each (lambda item (yield item)) tree))))
 
-(define (identity obj) obj)
+(define identity values)
 
 (define (tree-search comparator tree obj failure success)
   (receive (tree ret op)
