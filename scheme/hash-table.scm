@@ -217,6 +217,7 @@
    (lambda (return)
      (hash-table-for-each
       (lambda (key value)
+
         (hash-table-delete! ht key)
         (return key value))
       ht)
@@ -235,7 +236,7 @@
 
 (define (hash-table-entries ht)
   (apply values
-         (hash-table-fold (lambda (key value seed) (cons (cons key (car seed))
+         (hash-table-fold (lambda (key value seed) (list (cons key (car seed))
                                                          (cons value (cadr seed))))
                           '(() ())
                           ht)))
@@ -298,7 +299,8 @@
                          (hash-table-set! ht key (proc key val)))
                        ht))
 
-(define hash-table-fold s69:hash-table-fold)
+(define (hash-table-fold proc seed ht)
+  (s69:hash-table-fold ht proc seed))
 
 (define (hash-table-prune! proc ht)
   (hash-table-for-each (lambda (key val)
