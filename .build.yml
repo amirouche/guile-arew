@@ -8,9 +8,9 @@ packages:
   - guile-2.2
   - guile-2.2-dev
 sources:
-  - https://git.sr.ht/~amz3/guile-r7rs
+  - https://git.sr.ht/~amz3/guile-arew
 tasks:
-  - bootstrap: cd guile-r7rs && ./bootstrap
-  - configure: cd guile-r7rs && ./configure
-  - make: cd guile-r7rs && make
-  - check: cd guile-r7rs && make check
+  - bootstrap: cd guile-arew && ./bootstrap
+  - configure: cd guile-arew && ./configure
+  - make: cd guile-arew && make
+  - check: cd guile-arew && make check
