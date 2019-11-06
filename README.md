@@ -1,15 +1,15 @@
 # guile-arew
 
-[![builds.sr.ht status](https://builds.sr.ht/~amz3/guile-arew.svg)](https://builds.sr.ht/~amz3/guile-arew?)
-
-![live smart, die old](https://git.sr.ht/%7Eamz3/guile-arew/blob/master/liubov-ilchuk-8V6LbC9ZCwg-unsplash.jpg)
-
 ## Introduction
+
+[![builds.sr.ht status](https://builds.sr.ht/~amz3/guile-arew.svg)](https://builds.sr.ht/~amz3/guile-arew?)
 
 guile-arew is the collection of libraries part of
 [R7RS](https://r7rs.org) bundled for GNU Guile 2.2 or later.
 
 **This is a work-in-progress, use it at your own risks.**
+
+![live smart, die old](https://git.sr.ht/%7Eamz3/guile-arew/blob/master/liubov-ilchuk-8V6LbC9ZCwg-unsplash.jpg)
 
 ### Table of Content
 
