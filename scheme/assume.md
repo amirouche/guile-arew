@@ -16,10 +16,10 @@ produce better code and to issue better warnings about dead code.
 
 #### `(assume obj message ...)` syntax
 
-This special form is an expression that evaluates to the value of obj
-if obj evaluates to a true value. It is an error if obj evaluates to a
-false value. In this case, implementations are encouraged to report
-this error together with the messages to the user, at least when the
-implementation is in debug or non-optimizing mode. In case of
-reporting the error, an implementation is also encouraged to report
-the source location of the source of the error.
+This special form is an expression that evaluates to the value of
+`OBJ` if `OBJ` evaluates to a true value. It is an error if `OBJ`
+evaluates to a false value. In this case, implementations are
+encouraged to report this error together with the messages to the
+user, at least when the implementation is in debug or non-optimizing
+mode. In case of reporting the error, an implementation is also
+encouraged to report the source location of the source of the error.

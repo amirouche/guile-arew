@@ -10,7 +10,7 @@ packages:
 sources:
   - https://git.sr.ht/~amz3/guile-arew
 tasks:
-  - bootstrap: cd guile-arew && ./bootstrap
-  - configure: cd guile-arew && ./configure
-  - make: cd guile-arew && make
-  - check: cd guile-arew && make check
+#  - bootstrap: cd guile-arew && ./bootstrap
+#  - configure: cd guile-arew && ./configure
+#  - make: cd guile-arew && make
+  - check: cd guile-arew && guile -L . check.scm
