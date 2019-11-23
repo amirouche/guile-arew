@@ -1,3 +1,4 @@
+
 ## `(scheme base)`
 
 ### `_`
@@ -6,8 +7,7 @@ TODO (missing in r7rs?)
 
 ### `...`
 
-It is called ellipsis. It used in macros, `match` that is not part of
-R7RS. It signify that a pattern must be repeated.
+It is called ellipsis. It signify that a pattern must be repeated.
 
 ### `=>`
 
@@ -15,7 +15,7 @@ TODO
 
 ### `else`
 
-Used in `cond` form as in the last clause as a fallback.
+Used in `cond` and `case` form as in the last clause as a fallback.
 
 ### `(* number ...)`
 
@@ -242,7 +242,7 @@ Abbreviation for `call-with-continuation`.
 Returns the contents of the car field ofpair.  Note that it is an error
 to take the `car` of the empty list.
 
-### `(case key clause1 clause2 ...)` syntax
+### `(case <key> <clause1> <clause2> ...)` syntax
 
 TODO
 
@@ -316,11 +316,11 @@ of delivering or accepting data.
 Closes the resource associated with port, rendering the port incapable
 of delivering or accepting data.
 
-### `complex?`
+### `(complex? obj)`
 
 Returns #t if obj is a complex number, otherwise returns #f.
 
-### `cond`
+### `(cond <clause1> ...)`
 
 TODO
 
@@ -334,13 +334,13 @@ Returns a newly allocated pair whose car is obj1 and whose cdr is
 obj2. The pair is guaranteed to be different (in the sense of eqv?)
 from every existing object.
 
-### `current-error-port`
+### `(current-error-port [port])`
 
 Returns the current default error port (an output port). That
 procedure is also a parameter object, which can be overridden with
 `parameterize`.
 
-### `current-input-port`
+### `(current-input-port [port])`
 
 Returns the current default input port. That procedure is also a
 parameter object, which can be overridden with `parameterize`.
@@ -350,11 +350,15 @@ parameter object, which can be overridden with `parameterize`.
 Returns the current default output port. That procedure is also a
 parameter object, which can be overridden with `parameterize`.
 
-### `define`
+### `(define <name> <expr>)`
 
 TODO
 
-### `define-record-type`
+### `(define (<name> <variable> ...) <expr> ...)`
+
+TODO
+
+### `define-record-type` syntax
 
 TODO
 
@@ -534,9 +538,9 @@ are circular.
 
 Return the greatest common divisor.
 
-### `get-output-bytevector`
+### `(get-output-bytevector port)`
 
-It is an error if port was not created with open-output-bytevector.
+It is an error if port was not created with `open-output-bytevector`.
 
 Returns a bytevector consisting of the bytes that have been output to
 the port so far in the order they were output.
@@ -598,7 +602,7 @@ char->integer is applied to it, integer->char returns that character.
 
 Return `#t` if `OBJ` is an integer. Otherwise `#f`.
 
-### `lambda`
+### `(lambda <formals> <expr> ...)`
 
 TODO
 
@@ -1030,7 +1034,7 @@ reverse order.
 
 TODO
 
-### `(set! variable expression)` syntax
+### `(set! <variable> <expression>)` syntax
 
 Expression is evaluated, and the resulting value is stored in the
 location to which variable is bound. It is an error if variable is
@@ -1167,12 +1171,12 @@ The string-set! procedure stores char in element k of string. There is
 no requirement for this procedure to execute in constant time.
 
 ### `string<=?`
-TODO
 
+TODO
 
 ### `string<?`
-TODO
 
+TODO
 
 ### `(string=? string1 string2 ...)`
 
@@ -1180,12 +1184,12 @@ Returns #t if all the strings are the same length and contain exactly
 the same characters in the same positions, otherwise returns #f.
 
 ### `string>=?`
-TODO
 
+TODO
 
 ### `string>?`
-TODO
 
+TODO
 
 ### `(string? obj)`
 
@@ -1207,7 +1211,8 @@ returned by this procedure.
 
 ### `(symbol=? symbol1 symbol2 ...)`
 
-Returns #t if all the arguments are symbols and all have the same names in the sense of string=?.
+Returns #t if all the arguments are symbols and all have the same
+names in the sense of string=?.
 
 ### `(symbol? obj)`
 
@@ -1248,7 +1253,7 @@ otherwise. If u8-ready? returns #t then the next read-u8 operation on
 the given port is guaranteed not to hang. If the port is at end of
 file then u8-ready? returns #t.
 
-### `(unless test expr ...)` syntax
+### `(unless <test> <expr> ...)` syntax
 
 The test is evaluated, and if it evaluates to #f, the expressions are
 evaluated in order. The result of the unless expression is
@@ -1371,7 +1376,7 @@ The vector-set! procedure stores obj in element k of vector.
 
 Returns #t if obj is a bytevector. Otherwise, #f is returned.
 
-### `(when test expr ...)` syntax
+### `(when <test> <expr> ...)` syntax
 
 The test is evaluated, and if it evaluates to a true value, the
 expressions are evaluated in order. The result of the when expression

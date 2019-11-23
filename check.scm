@@ -46,7 +46,7 @@
     (display " @ ")
     (display filename)
     (newline)
-    (let ((module (resolve-module module-name))
+    (let ((module (resolve-interface module-name))
           (exports '()))
       (module-for-each
        (lambda (name variable)
@@ -56,6 +56,7 @@
             (sort exports (lambda (a b) (string<? (symbol->string (car a))
                                                   (symbol->string (car b))))))
       (for-each (lambda (x) (run-one (car x) (cdr x))) exports))))
+
 
 (for-each run %test-suite)
 

@@ -1,4 +1,4 @@
-## `(scheme bytevector)`
+## `(arew scheme bytevector)`
 
 This is based on [R6RS
 bytevectors](http://www.r6rs.org/final/html/r6rs-lib/r6rs-lib-Z-H-3.html#node_chap_2)
@@ -26,15 +26,15 @@ Returns #t if obj is a bytevector, otherwise returns #f.
 
 ##### `(make-bytevector k [fill])`
 
-Returns a newly allocated bytevector of k bytes.
+Returns a newly allocated bytevector of `K` bytes.
 
-If the fill argument is missing, the initial contents of the returned
-bytevector are unspecified.
+If the `FILL` argument is missing, the initial contents of the
+returned bytevector are unspecified.
 
-If the fill argument is present, it must be an exact integer object in
-the interval {-128, ... 255} that specifies the initial value for the
-bytes of the bytevector: If fill is positive, it is interpreted as an
-octet; if it is negative, it is interpreted as a byte.
+If the `FILL` argument is present, it must be an exact integer object
+in the interval {-128, ... 255} that specifies the initial value for
+the bytes of the bytevector: If `FILL` is positive, it is interpreted
+as an octet; if it is negative, it is interpreted as a byte.
 
 ##### `(bytevector-length bytevector)`
 
